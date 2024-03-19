@@ -1,7 +1,7 @@
 <template>
   <main>
-    <div>
-      <ContentDoc class="content" />
+    <div class="container">
+      <ContentDoc path="/articles/one" class="content" />
     </div>
 
     <ContentList path="/articles" v-slot="{ list }">
@@ -14,11 +14,26 @@
 </template>
 
 <style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-color: red;
+}
+
 .content {
   align-items: top;
   text-align: left;
   padding: 0 2em;
-  font-family: Arial, Helvetica, sans-serif;
 
   img {
     width: 500px;
